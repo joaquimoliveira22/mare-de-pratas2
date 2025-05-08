@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f9ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cabecalho {
+    background-color: #1e88e5;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.logo p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.botoes-navegacao-container {
+    background-color: #f5f9ff;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.botoes-navegacao {
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.botao-nav {
+    padding: 0.8rem 1.5rem;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-align: center;
+    min-width: 120px;
+}
+
+.botao-nav:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.botao-nav.ativo {
+    background-color: white;
+    color: #1e88e5;
+    border: 2px solid #1e88e5;
+}
+
+.conteudo-principal {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.banner {
+    background: linear-gradient(rgba(30, 136, 229, 0.8), rgba(30, 136, 229, 0.8)), url('imagens/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.botao {
+    display: inline-block;
+    background-color: white;
+    color: #1e88e5;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.botao:hover {
+    background-color: #f5f9ff;
+    transform: translateY(-2px);
+}
+
+.titulo-secao {
+    text-align: center;
+    color: #1e88e5;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.produto {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+}
+
+.produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produto h3 {
+    padding: 0.5rem 1rem;
+    color: #1e88e5;
+}
+
+.produto .descricao {
+    padding: 0 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    min-height: 40px;
+}
+
+.produto .preco {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.botao-comprar {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-comprar:hover {
+    background-color: #1565c0;
+}
+
+.cadastro-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cadastro-container h2 {
+    color: #1e88e5;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.campo-formulario label {
+    color: #1e88e5;
+    font-weight: bold;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+    padding: 0.8rem;
+    border: 1px solid #bbdefb;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+    border-color: #1e88e5;
+    outline: none;
+}
+
+.campo-formulario textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.botao-enviar {
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.botao-enviar:hover {
+    background-color: #1565c0;
+}
+
+.sobre {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.sobre-conteudo {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.sobre-imagem {
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sobre-texto {
+    width: 50%;
+}
+
+.sobre-texto p {
+    margin-bottom: 1rem;
+}
+
+.rodape {
+    background-color: #1e88e5;
+    color: white;
+    margin-top: 3rem;
+}
+
+.rodape-colunas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rodape-colunas h3 {
+    margin-bottom: 1rem;
+}
+
+.rodape-colunas p {
+    margin-bottom: 0.5rem;
+}
+
+.rodape-colunas i {
+    margin-right: 0.5rem;
+}
+
+.rodape-copyright {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2rem;
+    }
+    
+    .banner {
+        height: 300px;
+    }
+    
+    .banner h2 {
+        font-size: 2rem;
+    }
+    
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+    
+    .sobre-imagem, .sobre-texto {
+        width: 100%;
+    }
+    
+    .botoes-navegacao {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .botao-nav {
+        width: 100%;
+    }
+}
